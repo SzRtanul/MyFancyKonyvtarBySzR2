@@ -48,5 +48,9 @@ class DatabaseSeeder extends Seeder
             'bookID' => "2",
             'userID'=> "1",
         ]);
+
+        User::factory(100)->create();
+        Book::factory(2)->create();
+        Copy::factory(100)->create();
     }
 }

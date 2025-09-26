@@ -2,6 +2,8 @@
 
 namespace Database\Factories;
 
+use App\Models\Book;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,8 +19,8 @@ class CopyFactory extends Factory
     public function definition(): array
     {
         return [
-            'bookID' => fake()->year(),
-            'userID' => fake()->year()
+            'bookID' => Book::all()->random()->id,
+            'userID' => User::all()->random()->id
         ];
     }
 }
