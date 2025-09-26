@@ -17,7 +17,8 @@ class CopyFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'bookID' => fake()->year(),
+            'userID' => fake()->year()
         ];
     }
 }

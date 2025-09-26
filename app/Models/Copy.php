@@ -9,4 +9,9 @@ class Copy extends Model
 {
     /** @use HasFactory<\Database\Factories\CopyFactory> */
     use HasFactory;
+
+     protected $fillable = [
+        'bookID',
+        'userID'
+    ];
 }
